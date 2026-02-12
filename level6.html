@@ -20,19 +20,17 @@
                             <span class="badge bg-primary mb-2" id="levelBadge">Level 6</span>
                         </div>
                         <h1 class="card-title fw-bold fs-3 mb-2">Conditionals: Pick the Correct Door</h1>
-                        <p class="text-muted">Click a door. Only one is correct. Use if/else.</p>
-                        <div class="d-flex justify-content-justify align-items-center gap-2 mb-3">
+                        <p class="text-muted">Click a door. Only one is correct. Use <b>if/else.</b></p>
+                        <div class="d-flex align-items-center gap-2 mb-3">
                             <button id="door1" class="btn btn-success flex-fill"> Door 1 </button>
                             <button id="door2" class="btn btn-warning flex-fill"> Door 2 </button>
                             <button id="door3" class="btn btn-danger flex-fill"> Door 3 </button>
                         </div>
-                        <div class="mb-3">
-                        <p class="text-secondary mb-3">Keep clicking and take a screenshot when coins changed.</p>
-                        </div>
+                        <div id="choiceResult" class="alert alert-primary mt-3 mb-0">Choose a door to see the result.</div>
                         <hr>
-                        <div class="d-grid gap-2 d-md-flex">
-                        <button class="btn btn-secondary flex-fill" onclick="window.location.href='level4.html'">Back</button>
-                        <button class="btn btn-dark flex-fill" onclick="window.location.href='level6.html'">Next Level</button>
+                        <div class="d-flex gap-2">
+                        <button class="btn btn-secondary flex-fill" onclick="window.location.href='level5.html'">Back</button>
+                        <button class="btn btn-dark flex-fill" onclick="window.location.href='level1.html'">Restart (Level 1)</button>
                         </div>
                         </div>
                     </div>
@@ -41,22 +39,18 @@
         </div>
     </div>
     <script>
-        let coens = 0;
+        const door2 = 2; // Door 2 is correct
+        const choiceResult = document.getElementById('choiceResult');
 
-        const minus1 = document.getElementById('minus1');
-        const addBtn = document.getElementById('addBtn');
-        const coinsNum = document.getElementById('coinsNum');
-
-        addBtn.addEventListener("click", function () {
-            coens ++;
-            coinsNum.textContent = coens;
-        });
-
-        minus1.addEventListener ("click", function () {
-            if (coens > 0) coens --;
-            coinsNum.textContent = coens;
-        });
-
+        function checkDoor(doorNumber) {
+            if (doorNumber === door2) {
+                choiceResult.className = 'result-box success';
+                choiceResult.innerHTML = `<strong>✅ Correct! Door ${doorNumber} was the right choice! You win!</strong>`;
+            } else {
+                choiceResult.className = 'result-box error';
+                choiceResult.innerHTML = `<strong>❌ Wrong! Door ${doorNumber} is incorrect. Try again!</strong>`;
+            }
+        }
     </script>
 </body>
 </html>
