@@ -1,0 +1,114 @@
+body {
+    background-color:  rgb(212, 234, 244);
+    min-height: 100vh;
+    padding: 40px 0;
+}
+
+
+.card {
+    width: 550px;
+    height: 210px;
+    border-radius: 15px;
+    background-color: rgb(233, 249, 247);
+    box-shadow: 0 10px 30px rgba(59, 58, 58, 0.3);
+    border: none;
+}
+
+
+.card2 {
+    width: 550px;
+    height: 270px;
+    border-radius: 15px;
+    background-color: rgb(233, 249, 247);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    border: none;
+}
+
+.card3 {
+     width: 550px;
+    height: 450px;
+    border-radius: 15px;
+    background-color: rgb(233, 249, 247);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    border: none;
+}
+
+.card-body {
+    padding: 20px;
+}
+
+
+
+.btn {
+    transition: all 0.3s ease;
+    border-radius: 8px;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.btn-primary {
+    background-color: #3b82f6;
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #2563eb;
+}
+
+.btn-secondary {
+    background-color: #718096;
+    border: none;
+}
+
+.btn-secondary:hover {
+    background-color: #4a5568;
+}
+
+.btn-dark {
+    background-color: #1a202c;
+    border: none;
+}
+
+.btn-dark:hover {
+    background-color: #0d1117;
+}
+
+.card-title {
+    color: #2d3748;
+    font-weight: 700;
+}
+
+.text-secondary {
+    color: #718096;
+}
+
+.container {
+    max-width: 1140px;
+}
+
+
+@media (max-width: 768px) {
+    .card-body {
+        padding: 1.5rem ;
+    }
+    
+    .card-title {
+        font-size: 1.5rem;
+    }
+}
+
+#notif {
+    color: #13233e;
+    font-weight: bold;
+}
+
+#btn-submit {
+    margin-top: 10px;
+}
+
+.name {
+    margin-bottom: 5px;
+}

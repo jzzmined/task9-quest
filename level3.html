@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Level 3</title>
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="styles.css">
+    
+</head>
+<body>
+    <div class="container mt-5 d-flex align-items-center justify-content-center">
+        <div class="row w-100">
+            <div class="col-12 col-md-8 col-lg-6 mx-auto">
+                <div class="card2 shadow-sm border-0 rounded-3">
+                    <div class="card-body p-3">
+                        <div class="mb-3">
+                            <span class="badge bg-primary mb-3" id="levelBadge"><i class="bi bi-bar-chart-fill"></i> Level 1</span>
+                        </div>
+                        <h1 class="card-title fw-bold fs-3 mb-3">JavaScript: Level Up</h1>
+                        <p id="notif" class="text-secondary mb-4">Click the button to increase the level number.</p>
+                        <div class="d-grid gap-2 d-md-flex">
+                        <button class="btn btn-success w-100 mb-3 flex-fill " id="levelUpBtn">Level Up</button>
+                        </div>
+                        <div class="d-grid gap-2 d-md-flex">
+                            <a href="level2.html" class="btn btn-secondary flex-fill" role="button">Back</a>
+                            <a href="level4.html" class="btn btn-dark flex-fill" role="button">Next Level</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        let currentLevel = 1;
+        const maxLevel = 6;
+        const levelBadge = document.getElementById('levelBadge');
+        const notif = document.getElementById('notif');
+        const levelUpBtn = document.getElementById('levelUpBtn');
+        
+        levelUpBtn.addEventListener('click', function() {
+            if (currentLevel < maxLevel) {
+                currentLevel++;
+                levelBadge.innerHTML = `<i class="bi bi-bar-chart-fill"></i> Level ${currentLevel}`;
+                
+                if (currentLevel === maxLevel) {
+                    levelUpBtn.disabled = true;
+                    levelUpBtn.textContent = 'Max Level Reached!';
+                }
+
+                notif.innerHTML = 
+                 '<i>You Level Up! Current Level: ' + currentLevel;
+            }
+        });
+    </script>
+</body>
+</html> 
