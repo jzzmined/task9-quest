@@ -14,7 +14,7 @@
     <div class="container mt-5 d-flex align-items-center justify-content-center">
         <div class="row w-100">
             <div class="col-12 col-md-8 col-lg-6 mx-auto">
-                <div class="card4 shadow-sm border-0 rounded-3">
+                <div class="card5 shadow-sm border-0 rounded-3">
                     <div class="card-body p-3">
                         <div class="mb-2">
                             <span class="badge bg-primary mb-2" id="levelBadge">Level 6</span>
@@ -26,7 +26,7 @@
                             <button id="door2" class="btn btn-warning flex-fill"> Door 2 </button>
                             <button id="door3" class="btn btn-danger flex-fill"> Door 3 </button>
                         </div>
-                        <div id="choiceResult" class="alert alert-primary mt-3 mb-0">Choose a door to see the result.</div>
+                        <div id="choiceResult" class="result-box">Choose a door to see the result.</div>
                         <hr>
                         <div class="d-flex gap-2">
                         <button class="btn btn-secondary flex-fill" onclick="window.location.href='level5.html'">Back</button>
@@ -39,11 +39,24 @@
         </div>
     </div>
     <script>
-        const door2 = 2; // Door 2 is correct
+        const correctDoor = 2; // Door 2 is correct
         const choiceResult = document.getElementById('choiceResult');
 
+        // Add event listeners to door buttons
+        document.getElementById('door1').addEventListener('click', function() {
+            checkDoor(1);
+        });
+
+        document.getElementById('door2').addEventListener('click', function() {
+            checkDoor(2);
+        });
+
+        document.getElementById('door3').addEventListener('click', function() {
+            checkDoor(3);
+        });
+
         function checkDoor(doorNumber) {
-            if (doorNumber === door2) {
+            if (doorNumber === correctDoor) {
                 choiceResult.className = 'result-box success';
                 choiceResult.innerHTML = `<strong>✅ Correct! Door ${doorNumber} was the right choice! You win!</strong>`;
             } else {
