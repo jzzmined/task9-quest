@@ -6,8 +6,10 @@ body {
 
 
 .card {
-    width: 550px;
-    height: 210px;
+  width: 100%;
+max-width: 550px;
+height: auto;
+min-height: 210px;
     border-radius: 20px;
     background-color:#FFEAE3;
     box-shadow: 5px 5px 15px rgb(188, 216, 215);
@@ -16,8 +18,10 @@ body {
 
 
 .card2 {
-    width: 550px;
-    height: 270px;
+    width: 100%;
+    max-width: 550px;
+    height: auto;
+    min-height: 210px;
     border-radius: 20px;
     background-color: #FFEAE3;
     box-shadow: 5px 5px 15px rgb(188, 216, 215);
@@ -25,8 +29,10 @@ body {
 }
 
 .card3 {
-    width: 550px;
-    height: 400px;
+    width: 100%;
+    max-width: 550px;
+    height: auto;
+    min-height: 210px;
     border-radius: 20px;
     background-color: #FFEAE3;
     box-shadow: 5px 5px 15px rgb(188, 216, 215);
@@ -34,8 +40,10 @@ body {
 }
 
 .card4 {
-    width: 550px;
-    height: 420px;
+    width: 100%;
+    max-width: 550px;
+    height: auto;
+    min-height: 210px;
     border-radius: 20px;
     background-color: #FFEAE3;
     box-shadow: 5px 5px 15px rgb(188, 216, 215);
@@ -43,8 +51,10 @@ body {
 }
 
 .card5 {
-    width: 550px;
-    height: 330px;
+    width: 100%;
+    max-width: 550px;
+    height: auto;
+    min-height: 210px;
     border-radius: 20px;
     background-color: #FFEAE3;
     box-shadow: 5px 5px 15px rgb(188, 216, 215);
@@ -187,9 +197,6 @@ body {
     font-weight: bold;
 }
 
-#btn-submit {
-    margin-top: 10px;
-}
 
 .name {
     margin-bottom: 5px;
